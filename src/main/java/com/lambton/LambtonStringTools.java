@@ -121,4 +121,10 @@ public class LambtonStringTools
         return ss;
     }
 
+    static String replaceSubString(String s1,String s2,String s3)
+    {
+        String ans=" ";
+        return  ans;
+    }
+
 }
