@@ -71,13 +71,13 @@ public class LambtonStringTools
 
             }
             String intials="";
-            System.out.println("names length : "+names.length);
+            //System.out.println("names length : "+names.length);
             for (int i=0;i<names.length-1;i++)
             {
                 String name=names[i];
-                System.out.println("names inside : "+name);
-                System.out.println("char at 0 "+name.charAt(0));
-                System.out.println("value : "+String.valueOf(name.charAt(0)));
+                //System.out.println("names inside : "+name);
+               //System.out.println("char at 0 "+name.charAt(0));
+                //System.out.println("value : "+String.valueOf(name.charAt(0)));
                 String nameinitial=(String.valueOf(name.charAt(0)));
                 String nameinitial2=nameinitial.toUpperCase();
                 //System.out.println("to upper case "+nameinitial2);
