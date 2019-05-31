@@ -113,4 +113,12 @@ public class LambtonStringTools
 
     }
 
+    static char mostFrequent(String s)
+    {
+        char ss=' ';
+        char []chararray=s.toCharArray();
+
+        return ss;
+    }
+
 }
