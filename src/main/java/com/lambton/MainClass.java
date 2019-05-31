@@ -10,5 +10,7 @@ public class MainClass
                 LambtonStringTools.binaryToDecimal("111112"));
         System.out.println(LambtonStringTools.binaryToDecimal("10001"));
 
+        System.out.println(LambtonStringTools.initials("James tiBeriUs kiRK"));
+
     }
 }

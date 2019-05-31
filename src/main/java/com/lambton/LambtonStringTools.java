@@ -45,20 +45,52 @@ public class LambtonStringTools
     }
     static String initials(String s)
     {
-        String FullName=s;        int countspace=0;
+        String FullName=s;
+        int countspace=0;
+
+        char space=' ';
+        char[] Fullnamearray=FullName.toCharArray();
         for(int i=0;i<FullName.length();i++)
         {
 
-            char space=' ';
-            char[] Fullnamearray=FullName.toCharArray();
             if (Fullnamearray[i]==space)
             {
                 countspace++;
             }
         }
+        if (countspace==2)
+        {
+            String FullNameLower=FullName.toLowerCase();
+            String []names=FullNameLower.split(" ");
+            String intials="";
+            for (int i=0;i<names.length-1;i++)
+            {
+                String name=names[0];
+                String nameinitial=(String.valueOf(name.charAt(0)));
+                nameinitial.toUpperCase();
+                intials+=nameinitial;
+                intials=intials.concat(". ");
+            }
+            String name3=names[2];
+            char [] name3array=name3.toCharArray();
+            String firstalphabet=String.valueOf(name3array[0]);
+            firstalphabet.toUpperCase();
+            String afterFirstAlphabet="";
+            for(int i=1;i<name3array.length;i++)
+            {
+                afterFirstAlphabet+=String.valueOf(name3array[i]);
+            }
+            String finalFullName="";
+            finalFullName=firstalphabet.concat(intials);
+            finalFullName=finalFullName.concat(firstalphabet);
+            finalFullName=finalFullName.concat(afterFirstAlphabet);
 
-        String []names=s.split(" ");
-        return s;
+            return s;
+
+        }
+        else return new String("null");
+
+
     }
 
 }
