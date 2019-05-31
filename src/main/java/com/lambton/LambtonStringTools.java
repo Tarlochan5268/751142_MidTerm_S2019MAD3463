@@ -43,7 +43,22 @@ public class LambtonStringTools
         }
 
     }
+    static String initials(String s)
+    {
+        String FullName=s;        int countspace=0;
+        for(int i=0;i<FullName.length();i++)
+        {
 
+            char space=' ';
+            char[] Fullnamearray=FullName.toCharArray();
+            if (Fullnamearray[i]==space)
+            {
+                countspace++;
+            }
+        }
 
+        String []names=s.split(" ");
+        return s;
+    }
 
 }
