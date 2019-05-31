@@ -1,0 +1,14 @@
+package com.lambton;
+
+public class MainClass
+{
+    public static void main(String[] args)
+    {
+        System.out.println(LambtonStringTools.reverse("Lambton"));
+
+        System.out.println(
+                LambtonStringTools.binaryToDecimal("111112"));
+        System.out.println(LambtonStringTools.binaryToDecimal("10001"));
+
+    }
+}
