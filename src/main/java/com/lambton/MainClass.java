@@ -13,6 +13,8 @@ public class MainClass
         System.out.println(LambtonStringTools.initials("James tiBeriUs kiRK"));
 
         System.out.println(LambtonStringTools.mostFrequent("Helllloooo"));
+        System.out.println(LambtonStringTools.mostFrequent("Hellllooo"));
+        System.out.println(LambtonStringTools.replaceSubString("the dog jumped over the fence","the","that"));
 
     }
 }
