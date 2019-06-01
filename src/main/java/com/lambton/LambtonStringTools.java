@@ -52,53 +52,33 @@ public class LambtonStringTools
         char[] Fullnamearray=FullName.toCharArray();
         for(int i=0;i<FullName.length();i++)
         {
-            //System.out.println("Fullname array "+Fullnamearray[i]);
             if (Fullnamearray[i]==space)
             {
                 countspace++;
             }
-            //System.out.println("spacecount : "+countspace);
         }
-        //System.out.println("space count outside : "+countspace);
         if (countspace==2)
         {
             String FullNameLower=FullName.toLowerCase();
-            //System.out.println("fullanem lower : "+FullNameLower);
             String []names=FullNameLower.split(" ");
-            for (String ss:names
-                 ) {
-                //System.out.println("Split String "+ss);
-
-            }
             String intials="";
-            //System.out.println("names length : "+names.length);
             for (int i=0;i<names.length-1;i++)
             {
                 String name=names[i];
-                //System.out.println("names inside : "+name);
-               //System.out.println("char at 0 "+name.charAt(0));
-                //System.out.println("value : "+String.valueOf(name.charAt(0)));
                 String nameinitial=(String.valueOf(name.charAt(0)));
                 String nameinitial2=nameinitial.toUpperCase();
-                //System.out.println("to upper case "+nameinitial2);
                 intials=intials.concat(nameinitial2);
-                //System.out.println("initials before: "+intials);
                 intials=intials.concat(". ");
 
-                //System.out.println("initials before: "+intials);
             }
             String name3=names[2];
-            //System.out.println("name3 "+name3);
             char [] name3array=name3.toCharArray();
             String firstalphabet=String.valueOf(name3array[0]);
-            //System.out.println(" firstalphabet "+firstalphabet);
             String firstalphabet2=firstalphabet.toUpperCase();
-            //System.out.println("firstalphabet2 "+firstalphabet2);
             String afterFirstAlphabet="";
             for(int i=1;i<name3array.length;i++)
             {
                 afterFirstAlphabet=afterFirstAlphabet.concat(String.valueOf(name3array[i]));
-                //System.out.println(" afterFirstAlphabet "+afterFirstAlphabet);
             }
             String finalFullName="";
             finalFullName=finalFullName.concat(intials);
@@ -116,9 +96,32 @@ public class LambtonStringTools
     static char mostFrequent(String s)
     {
         char ss=' ';
-        char []chararray=s.toCharArray();
-
-        return ss;
+        char[] stringarray = s.toCharArray();
+        int count=1;
+        int maximum=0;
+        char maxChar=0;
+        for(int i=1; i<stringarray.length; i++)
+        {
+            if(stringarray[i]==stringarray[i-1])
+            {
+                count++;
+            }
+            else
+                {
+                if(count>maximum)
+                {
+                    maximum=count;
+                    maxChar=stringarray[i-1];
+                }
+                count = 1;
+                }
+        }
+        if(count>=maximum)
+        {
+            maximum=count;
+            maxChar=stringarray[stringarray.length-1];
+        }
+        return maxChar;
     }
 
     static String replaceSubString(String s1,String s2,String s3)

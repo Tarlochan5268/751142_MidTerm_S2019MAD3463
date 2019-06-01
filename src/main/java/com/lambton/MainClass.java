@@ -12,5 +12,7 @@ public class MainClass
 
         System.out.println(LambtonStringTools.initials("James tiBeriUs kiRK"));
 
+        System.out.println(LambtonStringTools.mostFrequent("Helllloooo"));
+
     }
 }
